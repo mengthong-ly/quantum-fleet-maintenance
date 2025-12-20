@@ -26,7 +26,7 @@ jobs:
           docker build \
             -t ${{ secrets.DOCKER_USERNAME }}/quantum-fleet:${{ github.sha }} \
             -t ${{ secrets.DOCKER_USERNAME }}/quantum-fleet:latest \
-            quantum-fleet/
+            .
 
       # 4️⃣ Push Docker images
       - name: Push Docker Image
