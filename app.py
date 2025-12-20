@@ -179,3 +179,5 @@ elif page == "Evaluation":
         "Quantum ML performance is evaluated under simulator constraints "
         "and compared against classical baselines."
     )
+
+# Done
