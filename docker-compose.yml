@@ -1,0 +1,11 @@
+services:
+    quantum-fleet:
+        image: mengthongly/quantum-fleet:latest
+        container_name: quantum-fleet
+        restart: always
+        ports:
+            - "8001:8000"
+    environment:
+      APP_ENV: production
+      APP_DEBUG: false
+      DB_CONNECTION: pgsql
