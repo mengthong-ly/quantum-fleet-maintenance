@@ -43,7 +43,9 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             set -e
-            cd ~/quantum-fleet || exit 1
+            cd /home/ec2-user/quantum-fleet-maintenance
+            docker compose pull
+            docker compose up -d
 
             echo "🛑 Stopping streamlit service..."
             docker compose stop streamlit || true
